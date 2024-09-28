@@ -1,7 +1,7 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState = {
-    todos: [{id: 1, text: "Hello", completed: false}]
+    todos: []
 }
 
 export const todoSlice = createSlice({
@@ -24,7 +24,7 @@ export const todoSlice = createSlice({
         },
         toggleComplete: (state, action) => {
             state.todos = state.todos.map(
-                (todo) => todo.id === action.payload.id ? {...todo, completed: true} : todo
+                (todo) => todo.id === action.payload ? {...todo, completed: !todo.completed} : todo
             )
         }
     }

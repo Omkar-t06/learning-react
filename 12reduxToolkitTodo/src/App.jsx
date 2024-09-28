@@ -1,4 +1,4 @@
-import { TodoForm } from './components'
+import { TodoForm, TodoItem, Todos } from './components'
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <div className='mb-4'>
             <TodoForm/>
         </div>
+        <Todos/>
       </div>
     </div>
   )
